@@ -1,0 +1,22 @@
+repositories {
+    maven {
+        url "https://maven.shedaniel.me/"
+        content {
+            includeGroup "me.shedaniel"
+            includeGroup "me.shedaniel.cloth"
+            includeGroup "dev.architectury"
+        }
+    }
+
+    maven {
+        url "https://modmaven.dev"
+        content { includeGroup "appeng" }
+    }
+}
+
+dependencies {
+    modImplementation "lol.bai.megane:megane-api:7.0.0"
+    modRuntimeOnly "lol.bai.megane:megane-runtime:7.0.0"
+
+    modImplementation "appeng:appliedenergistics2-fabric:10.0.0-beta.4"
+}
