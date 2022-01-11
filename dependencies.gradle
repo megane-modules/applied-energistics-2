@@ -10,13 +10,17 @@ repositories {
 
     maven {
         url "https://modmaven.dev"
-        content { includeGroup "appeng" }
+        content {
+            includeGroup "appeng"
+        }
     }
 }
 
 dependencies {
-    modImplementation "lol.bai.megane:megane-api:7.0.0"
-    modRuntimeOnly "lol.bai.megane:megane-runtime:7.0.0"
+    modImplementation meganeModule("api:7.0.0")
+    modRuntimeOnly meganeModule("runtime:7.0.0")
+    modRuntimeOnly meganeModule("reborn-energy:7.0.0")
+    modRuntimeOnly meganeModule("fabric-transfer:7.0.0")
 
     modImplementation "appeng:appliedenergistics2-fabric:10.0.0-beta.4"
 }
